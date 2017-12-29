@@ -1,0 +1,1887 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm -rf kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o kernel/bootmain.o kernel/bootasm.o kernel/multiboot.o kernel/data.o kernel/bootother.o kernel/initcode.o kernel/bio.d kernel/console.d kernel/exec.d kernel/file.d kernel/fs.d kernel/ide.d kernel/ioapic.d kernel/kalloc.d kernel/kbd.d kernel/lapic.d kernel/main.d kernel/mp.d kernel/picirq.d kernel/pipe.d kernel/proc.d kernel/spinlock.d kernel/string.d kernel/swtch.d kernel/syscall.d kernel/sysfile.d kernel/sysproc.d kernel/timer.d kernel/trapasm.d kernel/trap.d kernel/uart.d kernel/vectors.d kernel/vm.d kernel/bootmain.d kernel/bootasm.d kernel/multiboot.d kernel/data.d kernel/bootother.d kernel/initcode.d kernel/vectors.S kernel/bootblock kernel/bootblock.out kernel/bootother.out kernel/initcode.out kernel/kernel bootother initcode xv6.img user/bin user/cat user/echo user/procon user/forktest user/grep user/init user/kill user/ln user/ls user/mkdir user/rm user/sh user/stressfs user/tester user/usertests user/wc user/zombie user/cat.o user/echo.o user/procon.o user/forktest.o user/grep.o user/init.o user/kill.o user/ln.o user/ls.o user/mkdir.o user/rm.o user/sh.o user/stressfs.o user/tester.o user/usertests.o user/wc.o user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/cat.d user/echo.d user/procon.d user/forktest.d user/grep.d user/init.d user/kill.d user/ln.d user/ls.d user/mkdir.d user/rm.d user/sh.d user/stressfs.d user/tester.d user/usertests.d user/wc.d user/zombie.d user/ulib.d user/usys.d user/printf.d user/umalloc.d tools/mkfs tools/mkfs.o tools/mkfs.d fs fs.img .gdbinit .bochsrc dist
+Trying to build project using make
+make
+Makefile:150: kernel/bio.d: No such file or directory
+Makefile:150: kernel/console.d: No such file or directory
+Makefile:150: kernel/exec.d: No such file or directory
+Makefile:150: kernel/file.d: No such file or directory
+Makefile:150: kernel/fs.d: No such file or directory
+Makefile:150: kernel/ide.d: No such file or directory
+Makefile:150: kernel/ioapic.d: No such file or directory
+Makefile:150: kernel/kalloc.d: No such file or directory
+Makefile:150: kernel/kbd.d: No such file or directory
+Makefile:150: kernel/lapic.d: No such file or directory
+Makefile:150: kernel/main.d: No such file or directory
+Makefile:150: kernel/mp.d: No such file or directory
+Makefile:150: kernel/picirq.d: No such file or directory
+Makefile:150: kernel/pipe.d: No such file or directory
+Makefile:150: kernel/proc.d: No such file or directory
+Makefile:150: kernel/spinlock.d: No such file or directory
+Makefile:150: kernel/string.d: No such file or directory
+Makefile:150: kernel/swtch.d: No such file or directory
+Makefile:150: kernel/syscall.d: No such file or directory
+Makefile:150: kernel/sysfile.d: No such file or directory
+Makefile:150: kernel/sysproc.d: No such file or directory
+Makefile:150: kernel/timer.d: No such file or directory
+Makefile:150: kernel/trapasm.d: No such file or directory
+Makefile:150: kernel/trap.d: No such file or directory
+Makefile:150: kernel/uart.d: No such file or directory
+Makefile:150: kernel/vectors.d: No such file or directory
+Makefile:150: kernel/vm.d: No such file or directory
+Makefile:150: kernel/bootmain.d: No such file or directory
+Makefile:150: kernel/bootasm.d: No such file or directory
+Makefile:150: kernel/multiboot.d: No such file or directory
+Makefile:150: kernel/data.d: No such file or directory
+Makefile:150: kernel/bootother.d: No such file or directory
+Makefile:150: kernel/initcode.d: No such file or directory
+Makefile:150: user/cat.d: No such file or directory
+Makefile:150: user/echo.d: No such file or directory
+Makefile:150: user/procon.d: No such file or directory
+Makefile:150: user/forktest.d: No such file or directory
+Makefile:150: user/grep.d: No such file or directory
+Makefile:150: user/init.d: No such file or directory
+Makefile:150: user/kill.d: No such file or directory
+Makefile:150: user/ln.d: No such file or directory
+Makefile:150: user/ls.d: No such file or directory
+Makefile:150: user/mkdir.d: No such file or directory
+Makefile:150: user/rm.d: No such file or directory
+Makefile:150: user/sh.d: No such file or directory
+Makefile:150: user/stressfs.d: No such file or directory
+Makefile:150: user/tester.d: No such file or directory
+Makefile:150: user/usertests.d: No such file or directory
+Makefile:150: user/wc.d: No such file or directory
+Makefile:150: user/zombie.d: No such file or directory
+Makefile:150: user/ulib.d: No such file or directory
+Makefile:150: user/usys.d: No such file or directory
+Makefile:150: user/printf.d: No such file or directory
+Makefile:150: user/umalloc.d: No such file or directory
+Makefile:150: tools/mkfs.d: No such file or directory
+gcc  -iquote include -Wall -Werror -ggdb  \
+  -M -MG tools/mkfs.c -MF tools/mkfs.d -MT tools/mkfs.d -MT tools/mkfs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/umalloc.c -MF user/umalloc.d -MT user/umalloc.d -MT user/umalloc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/printf.c -MF user/printf.d -MT user/printf.d -MT user/printf.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/usys.S -MF user/usys.d -MT user/usys.d -MT user/usys.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ulib.c -MF user/ulib.d -MT user/ulib.d -MT user/ulib.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/zombie.c -MF user/zombie.d -MT user/zombie.d -MT user/zombie.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/wc.c -MF user/wc.d -MT user/wc.d -MT user/wc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/usertests.c -MF user/usertests.d -MT user/usertests.d -MT user/usertests.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/stressfs.c -MF user/stressfs.d -MT user/stressfs.d -MT user/stressfs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/sh.c -MF user/sh.d -MT user/sh.d -MT user/sh.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/rm.c -MF user/rm.d -MT user/rm.d -MT user/rm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/mkdir.c -MF user/mkdir.d -MT user/mkdir.d -MT user/mkdir.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ls.c -MF user/ls.d -MT user/ls.d -MT user/ls.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ln.c -MF user/ln.d -MT user/ln.d -MT user/ln.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/kill.c -MF user/kill.d -MT user/kill.d -MT user/kill.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/init.c -MF user/init.d -MT user/init.d -MT user/init.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/grep.c -MF user/grep.d -MT user/grep.d -MT user/grep.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/forktest.c -MF user/forktest.d -MT user/forktest.d -MT user/forktest.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/procon.c -MF user/procon.d -MT user/procon.d -MT user/procon.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/echo.c -MF user/echo.d -MT user/echo.d -MT user/echo.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/cat.c -MF user/cat.d -MT user/cat.d -MT user/cat.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/initcode.S -MF kernel/initcode.d -MT kernel/initcode.d -MT kernel/initcode.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootother.S -MF kernel/bootother.d -MT kernel/bootother.d -MT kernel/bootother.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/data.S -MF kernel/data.d -MT kernel/data.d -MT kernel/data.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/multiboot.S -MF kernel/multiboot.d -MT kernel/multiboot.d -MT kernel/multiboot.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootasm.S -MF kernel/bootasm.d -MT kernel/bootasm.d -MT kernel/bootasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootmain.c -MF kernel/bootmain.d -MT kernel/bootmain.d -MT kernel/bootmain.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/vm.c -MF kernel/vm.d -MT kernel/vm.d -MT kernel/vm.o
+perl kernel/vectors.pl > kernel/vectors.S
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/vectors.S -MF kernel/vectors.d -MT kernel/vectors.d -MT kernel/vectors.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/uart.c -MF kernel/uart.d -MT kernel/uart.d -MT kernel/uart.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/trap.c -MF kernel/trap.d -MT kernel/trap.d -MT kernel/trap.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/trapasm.S -MF kernel/trapasm.d -MT kernel/trapasm.d -MT kernel/trapasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/timer.c -MF kernel/timer.d -MT kernel/timer.d -MT kernel/timer.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/sysproc.c -MF kernel/sysproc.d -MT kernel/sysproc.d -MT kernel/sysproc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/sysfile.c -MF kernel/sysfile.d -MT kernel/sysfile.d -MT kernel/sysfile.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/syscall.c -MF kernel/syscall.d -MT kernel/syscall.d -MT kernel/syscall.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/swtch.S -MF kernel/swtch.d -MT kernel/swtch.d -MT kernel/swtch.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/string.c -MF kernel/string.d -MT kernel/string.d -MT kernel/string.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/spinlock.c -MF kernel/spinlock.d -MT kernel/spinlock.d -MT kernel/spinlock.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/proc.c -MF kernel/proc.d -MT kernel/proc.d -MT kernel/proc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/pipe.c -MF kernel/pipe.d -MT kernel/pipe.d -MT kernel/pipe.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/picirq.c -MF kernel/picirq.d -MT kernel/picirq.d -MT kernel/picirq.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/mp.c -MF kernel/mp.d -MT kernel/mp.d -MT kernel/mp.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/main.c -MF kernel/main.d -MT kernel/main.d -MT kernel/main.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/lapic.c -MF kernel/lapic.d -MT kernel/lapic.d -MT kernel/lapic.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/kbd.c -MF kernel/kbd.d -MT kernel/kbd.d -MT kernel/kbd.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/kalloc.c -MF kernel/kalloc.d -MT kernel/kalloc.d -MT kernel/kalloc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/ioapic.c -MF kernel/ioapic.d -MT kernel/ioapic.d -MT kernel/ioapic.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/ide.c -MF kernel/ide.d -MT kernel/ide.d -MT kernel/ide.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/fs.c -MF kernel/fs.d -MT kernel/fs.d -MT kernel/fs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/file.c -MF kernel/file.d -MT kernel/file.d -MT kernel/file.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/exec.c -MF kernel/exec.d -MT kernel/exec.d -MT kernel/exec.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/console.c -MF kernel/console.d -MT kernel/console.d -MT kernel/console.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bio.c -MF kernel/bio.d -MT kernel/bio.d -MT kernel/bio.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/bootasm.S -o kernel/bootasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	 -Os -c -o kernel/bootmain.o kernel/bootmain.c
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x7C00 \
+	--output=kernel/bootblock.out kernel/bootasm.o kernel/bootmain.o
+objcopy -S -O binary -j .text kernel/bootblock.out kernel/bootblock
+./kernel/sign.pl kernel/bootblock
+boot block is 431 bytes (max 510)
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/console.o kernel/console.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/exec.o kernel/exec.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/file.o kernel/file.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/fs.o kernel/fs.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ide.o kernel/ide.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ioapic.o kernel/ioapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kalloc.o kernel/kalloc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kbd.o kernel/kbd.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/lapic.o kernel/lapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/main.o kernel/main.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/mp.o kernel/mp.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/picirq.o kernel/picirq.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/pipe.o kernel/pipe.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/proc.o kernel/proc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/spinlock.o kernel/spinlock.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/string.o kernel/string.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/swtch.S -o kernel/swtch.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/syscall.o kernel/syscall.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysfile.o kernel/sysfile.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysproc.o kernel/sysproc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/timer.o kernel/timer.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/trapasm.S -o kernel/trapasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/trap.o kernel/trap.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/uart.o kernel/uart.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/vectors.S -o kernel/vectors.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/vm.o kernel/vm.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/multiboot.S -o kernel/multiboot.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/data.S -o kernel/data.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/bootother.S -o kernel/bootother.o
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x7000 \
+	--output=kernel/bootother.out kernel/bootother.o
+objcopy -S -O binary kernel/bootother.out bootother
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/initcode.S -o kernel/initcode.o
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x2000 \
+	--output=kernel/initcode.out kernel/initcode.o
+objcopy -S -O binary kernel/initcode.out initcode
+ld  -m    elf_i386 -nostdlib --omagic \
+	--section-start=.text=0x100000 --entry=main --output=kernel/kernel \
+	kernel/multiboot.o kernel/data.o kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o \
+	-b binary initcode bootother
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes (5.1 MB, 4.9 MiB) copied, 0.00948614 s, 540 MB/s
+dd if=kernel/bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes copied, 5.0852e-05 s, 10.1 MB/s
+dd if=kernel/kernel of=xv6.img seek=1 conv=notrunc
+251+1 records in
+251+1 records out
+128624 bytes (129 kB, 126 KiB) copied, 0.000256806 s, 501 MB/s
+gcc -c  -iquote include -Wall -Werror -ggdb  -o tools/mkfs.o tools/mkfs.c
+gcc  tools/mkfs.o -o tools/mkfs
+mkdir -p fs
+cp README fs/README
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/cat.o user/cat.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ulib.o user/ulib.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c user/usys.S -o user/usys.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/printf.o user/printf.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/umalloc.o user/umalloc.c
+mkdir -p user/bin
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/cat user/cat.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/cat fs/cat
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/echo.o user/echo.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/echo user/echo.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/echo fs/echo
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/procon.o user/procon.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/procon user/procon.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/procon fs/procon
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/forktest.o user/forktest.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/forktest user/forktest.o user/ulib.o user/usys.o
+cp user/bin/forktest fs/forktest
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/grep.o user/grep.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/grep user/grep.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/grep fs/grep
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/init.o user/init.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/init user/init.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/init fs/init
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/kill.o user/kill.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/kill user/kill.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/kill fs/kill
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ln.o user/ln.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/ln user/ln.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ln fs/ln
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ls.o user/ls.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/ls user/ls.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ls fs/ls
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/mkdir.o user/mkdir.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/mkdir user/mkdir.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/mkdir fs/mkdir
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/rm.o user/rm.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/rm user/rm.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/rm fs/rm
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/sh.o user/sh.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/sh user/sh.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/sh fs/sh
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/stressfs.o user/stressfs.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/stressfs user/stressfs.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/stressfs fs/stressfs
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/usertests.o user/usertests.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/usertests user/usertests.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/usertests fs/usertests
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/wc.o user/wc.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/wc user/wc.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/wc fs/wc
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/zombie.o user/zombie.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/zombie user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/zombie fs/zombie
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 498 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/ls user/bin/stressfs user/bin/grep user/bin/tester user/bin/kill user/bin/cat user/bin/mkdir user/bin/init user/bin/rm user/bin/echo user/bin/procon user/bin/ln user/bin/usertests user/bin/sh user/bin/wc user/bin/zombie
+
+
+test build PASSED
+ (build xv6 using make)
+
+starting clone
+
+**********************************************************************
+
+Test clone
+clone and verify that address space is shared
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/clone.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 499 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test clone PASSED (8 of 8)
+ (clone and verify that address space is shared)
+
+starting clone2
+
+**********************************************************************
+
+Test clone2
+clone and play with the argument
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/clone2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 499 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test clone2 PASSED (8 of 8)
+ (clone and play with the argument)
+
+starting clone3
+
+**********************************************************************
+
+Test clone3
+clone copies file descriptors, but doesn't share
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/clone3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test clone3 PASSED (5 of 5)
+ (clone copies file descriptors, but doesn't share)
+
+starting join
+
+**********************************************************************
+
+Test join
+clone and join syscalls
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/join.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test join PASSED (8 of 8)
+ (clone and join syscalls)
+
+starting join2
+
+**********************************************************************
+
+Test join2
+join should not handle child processes (forked)
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/join2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 499 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+Dont have kids
+TEST PASSED
+
+
+test join2 PASSED (8 of 8)
+ (join should not handle child processes (forked))
+
+starting join3
+
+**********************************************************************
+
+Test join3
+join, not wait, should handle threads
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/join3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test join3 PASSED (8 of 8)
+ (join, not wait, should handle threads)
+
+starting recursion
+
+**********************************************************************
+
+Test recursion
+multiple threads with some depth of function calls
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/recursion.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 502 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+
+test recursion PASSED (8 of 8)
+ (multiple threads with some depth of function calls)
+
+starting recursion2
+
+**********************************************************************
+
+Test recursion2
+should trap stack overflow
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/recursion2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 5 tester: trap 14 err 6 on cpu 0 eip 0x22cf addr 0x9cffc--kill proc
+TEST PASSED
+
+
+test recursion2 PASSED (8 of 8)
+ (should trap stack overflow)
+
+starting fork_clone
+
+**********************************************************************
+
+Test fork_clone
+threads across processes should not share data
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/fork_clone.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 6 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 7 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+test fork_clone PASSED (10 of 10)
+ (threads across processes should not share data)
+
+starting many_threads
+
+**********************************************************************
+
+Test many_threads
+threads should clean up stacks before exit
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/many_threads.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 499 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 5 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 6 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 7 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 8 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 9 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 10 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 11 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 12 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 13 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 14 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 15 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 16 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 17 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 19 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 18 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 20 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 21 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 22 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 23 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 24 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 25 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 26 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 27 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 28 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 29 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 30 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 31 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 32 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 33 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 34 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 35 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 36 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 37 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 39 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 40 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 41 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 42 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 43 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 38 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 44 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 45 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 46 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 47 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 49 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 50 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 51 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 48 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 52 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 53 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 54 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 55 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 56 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 57 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 58 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 59 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 60 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 61 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 62 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 63 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 64 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 65 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 66 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 67 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 68 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 70 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 71 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 72 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 73 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 74 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 75 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 69 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 76 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 77 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 78 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 80 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 81 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 82 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 83 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 79 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test many_threads PASSED (8 of 8)
+ (threads should clean up stacks before exit)
+
+starting badaddr
+
+**********************************************************************
+
+Test badaddr
+thread should not access the calling process's stack
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/badaddr.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test badaddr PASSED (5 of 5)
+ (thread should not access the calling process's stack)
+
+starting badaddr2
+
+**********************************************************************
+
+Test badaddr2
+thread should not access other thread's stack
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/badaddr2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 6 on cpu 0 eip 0x2473 addr 0x9b000--kill proc
+pid 5 tester: trap 14 err 6 on cpu 0 eip 0x2473 addr 0x9d000--kill proc
+TEST PASSED
+
+
+test badaddr2 PASSED (5 of 5)
+ (thread should not access other thread's stack)
+
+starting guard
+
+**********************************************************************
+
+Test guard
+thread should not access the guard pages
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/guard.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 6 on cpu 0 eip 0x2282 addr 0x9e800--kill proc
+TEST PASSED
+
+
+test guard PASSED (5 of 5)
+ (thread should not access the guard pages)
+
+starting locks
+
+**********************************************************************
+
+Test locks
+test lock correctness
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/locks.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 5 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 6 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 7 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 8 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 9 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 10 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 11 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test locks PASSED (8 of 8)
+ (test lock correctness)
+
+starting recursion3
+
+**********************************************************************
+
+Test recursion3
+should trap stack overflow in multiple threads
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/recursion3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 6 on cpu 0 eip 0x22a6 addr 0x9cffc--kill proc
+pid 5 tester: trap 14 err 6 on cpu 0 eip 0x22a6 addr 0x9affc--kill proc
+pid 6 tester: trap 14 err 6 on cpu 0 eip 0x22a6 addr 0x9cffc--kill proc
+pid 7 tester: trap 14 err 6 on cpu 0 eip 0x22a6 addr 0x9affc--kill proc
+TEST PASSED
+
+
+test recursion3 PASSED (5 of 5)
+ (should trap stack overflow in multiple threads)
+
+starting size
+
+**********************************************************************
+
+Test size
+check that address space size is updated in threads
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/size.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+
+test size PASSED (10 of 10)
+ (check that address space size is updated in threads)
+
+starting cond
+
+**********************************************************************
+
+Test cond
+test cond_wait and cond_signal, cannot leave cond_wait without lock
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/cond.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 500 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+cv : 0x3010, lock : 0x300C
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test cond PASSED (10 of 10)
+ (test cond_wait and cond_signal, cannot leave cond_wait without lock)
+
+starting cond2
+
+**********************************************************************
+
+Test cond2
+test cond_wait and cond_signal, don't wakeup on wrong cv
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/cond2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test cond2 PASSED (5 of 5)
+ (test cond_wait and cond_signal, don't wakeup on wrong cv)
+
+starting cond3
+
+**********************************************************************
+
+Test cond3
+test cond_wait and cond_signal, signal, don't broadcast
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/cond3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 5 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 6 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 7 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 8 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 9 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 10 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+pid 11 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+test cond3 PASSED (5 of 5)
+ (test cond_wait and cond_signal, signal, don't broadcast)
+
+starting cond4
+
+**********************************************************************
+
+Test cond4
+race condition in CV? (must atomically release lock and sleep)
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/cond4.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+
+test cond4 PASSED (5 of 5)
+ (race condition in CV? (must atomically release lock and sleep))
+
+starting sema
+
+**********************************************************************
+
+Test sema
+test lock correctness from semaphore
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/sema.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 501 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+
+test sema PASSED (8 of 8)
+ (test lock correctness from semaphore)
+
+starting producer_consumer_sem
+
+**********************************************************************
+
+Test producer_consumer_sem
+producer-consumer with semaphores
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/4b/tests/producer_consumer_sem.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x2000 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+cat
+init
+forktest
+zombie
+tester
+sh
+procon
+wc
+stressfs
+ln
+grep
+rm
+ls
+echo
+kill
+usertests
+mkdir
+README
+balloc: first 503 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/u/c/s/cs537-1/ta/tools/qemu -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+producer 4 : 0
+producer 4 : 1
+producer 4 : 2
+producer 4 : 3
+producer 4 : 4
+producer 4 : 5
+producer 4 : 6
+producer 4 : 7
+producer 4 : 8
+producer 4 : 9
+consumer 5 : 0
+consumer 6 : 1
+producer 4 : 10
+consumer 5 : 2
+producer 4 : 11
+consumer 5 : 3
+producer 4 : 12
+consumer 5 : 4
+producer 4 : 13
+consumer 5 : 5
+producer 4 : 14
+consumer 5 : 6
+producer 4 : 15
+consumer 5 : 7
+producer 4 : 16
+consumer 5 : 8
+producer 4 : 17
+consumer 5 : 9
+producer 4 : 18
+consumer 5 : 10
+producer 4 : 19
+consumer 5 : 11
+producer 4 : 20
+consumer 5 : 12
+producer 4 : 21
+consumer 5 : 13
+producer 4 : 22
+consumer 5 : 14
+producer 4 : 23
+consumer 5 : 15
+producer 4 : 24
+consumer 5 : 16
+producer 4 : 25
+consumer 5 : 17
+producer 4 : 26
+consumer 5 : 18
+producer 4 : 27
+consumer 5 : 19
+producer 4 : 28
+consumer 5 : 20
+producer 4 : 29
+consumer 5 : 21
+producer 4 : 30
+consumer 5 : 22
+producer 4 : 31
+consumer 5 : 23
+producer 4 : 32
+consumer 5 : 24
+producer 4 : 33
+consumer 5 : 25
+producer 4 : 34
+consumer 5 : 26
+producer 4 : 35
+consumer 5 : 27
+producer 4 : 36
+consumer 5 : 28
+producer 4 : 37
+consumer 5 : 29
+producer 4 : 38
+consumer 5 : 30
+producer 4 : 39
+consumer 5 : 31
+producer 4 : 40
+consumer 5 : 32
+producer 4 : 41
+consumer 5 : 33
+producer 4 : 42
+consumer 5 : 34
+producer 4 : 43
+consumer 5 : 35
+producer 4 : 44
+consumer 5 : 36
+producer 4 : 45
+consumer 5 : 37
+producer 4 : 46
+consumer 5 : 38
+producer 4 : 47
+consumer 5 : 39
+producer 4 : 48
+consumer 5 : 40
+producer 4 : 49
+consumer 5 : 41
+producer 4 : 50
+consumer 5 : 42
+producer 4 : 51
+consumer 5 : 43
+producer 4 : 52
+consumer 5 : 44
+producer 4 : 53
+consumer 5 : 45
+producer 4 : 54
+consumer 5 : 46
+producer 4 : 55
+consumer 5 : 47
+producer 4 : 56
+consumer 5 : 48
+producer 4 : 57
+consumer 5 : 49
+producer 4 : 58
+consumer 5 : 50
+producer 4 : 59
+consumer 5 : 51
+producer 4 : 60
+consumer 5 : 52
+producer 4 : 61
+consumer 5 : 53
+producer 4 : 62
+consumer 5 : 54
+producer 4 : 63
+consumer 5 : 55
+producer 4 : 64
+consumer 5 : 56
+producer 4 : 65
+consumer 5 : 57
+producer 4 : 66
+consumer 5 : 58
+producer 4 : 67
+consumer 5 : 59
+producer 4 : 68
+consumer 5 : 60
+producer 4 : 69
+consumer 5 : 61
+producer 4 : 70
+consumer 5 : 62
+producer 4 : 71
+consumer 5 : 63
+producer 4 : 72
+consumer 5 : 64
+producer 4 : 73
+consumer 5 : 65
+producer 4 : 74
+consumer 5 : 66
+producer 4 : 75
+consumer 5 : 67
+producer 4 : 76
+consumer 5 : 68
+producer 4 : 77
+consumer 5 : 69
+producer 4 : 78
+consumer 5 : 70
+producer 4 : 79
+consumer 5 : 71
+producer 4 : 80
+consumer 5 : 72
+producer 4 : 81
+consumer 5 : 73
+producer 4 : 82
+consumer 5 : 74
+producer 4 : 83
+consumer 5 : 75
+producer 4 : 84
+consumer 5 : 76
+producer 4 : 85
+consumer 5 : 77
+producer 4 : 86
+consumer 5 : 78
+producer 4 : 87
+consumer 5 : 79
+producer 4 : 88
+consumer 5 : 80
+producer 4 : 89
+consumer 5 : 81
+producer 4 : 90
+consumer 5 : 82
+producer 4 : 91
+consumer 5 : 83
+producer 4 : 92
+consumer 5 : 84
+producer 4 : 93
+consumer 5 : 85
+producer 4 : 94
+consumer 5 : 86
+producer 4 : 95
+consumer 5 : 87
+producer 4 : 96
+consumer 5 : 88
+producer 4 : 97
+consumer 5 : 89
+producer 4 : 98
+consumer 5 : 90
+producer 4 : 99
+pid 4 tester: trap 14 err 5 on cpu 0 eip 0xffffffff addr 0xffffffff--kill proc
+consumer 5 : 91
+consumer 6 : 92
+consumer 5 : 93
+consumer 6 : 94
+consumer 7 : 95
+consumer 8 : 96
+consumer 9 : 97
+consumer 10 : 98
+consumer 11 : 99
+TEST PASSED
+
+
+test producer_consumer_sem PASSED (10 of 10)
+ (producer-consumer with semaphores)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build xv6 using make)
+
+test clone PASSED (8 of 8)
+ (clone and verify that address space is shared)
+
+test clone2 PASSED (8 of 8)
+ (clone and play with the argument)
+
+test clone3 PASSED (5 of 5)
+ (clone copies file descriptors, but doesn't share)
+
+test join PASSED (8 of 8)
+ (clone and join syscalls)
+
+test join2 PASSED (8 of 8)
+ (join should not handle child processes (forked))
+
+test join3 PASSED (8 of 8)
+ (join, not wait, should handle threads)
+
+test recursion PASSED (8 of 8)
+ (multiple threads with some depth of function calls)
+
+test recursion2 PASSED (8 of 8)
+ (should trap stack overflow)
+
+test fork_clone PASSED (10 of 10)
+ (threads across processes should not share data)
+
+test many_threads PASSED (8 of 8)
+ (threads should clean up stacks before exit)
+
+test badaddr PASSED (5 of 5)
+ (thread should not access the calling process's stack)
+
+test badaddr2 PASSED (5 of 5)
+ (thread should not access other thread's stack)
+
+test guard PASSED (5 of 5)
+ (thread should not access the guard pages)
+
+test locks PASSED (8 of 8)
+ (test lock correctness)
+
+test recursion3 PASSED (5 of 5)
+ (should trap stack overflow in multiple threads)
+
+test size PASSED (10 of 10)
+ (check that address space size is updated in threads)
+
+test cond PASSED (10 of 10)
+ (test cond_wait and cond_signal, cannot leave cond_wait without lock)
+
+test cond2 PASSED (5 of 5)
+ (test cond_wait and cond_signal, don't wakeup on wrong cv)
+
+test cond3 PASSED (5 of 5)
+ (test cond_wait and cond_signal, signal, don't broadcast)
+
+test cond4 PASSED (5 of 5)
+ (race condition in CV? (must atomically release lock and sleep))
+
+test sema PASSED (8 of 8)
+ (test lock correctness from semaphore)
+
+test producer_consumer_sem PASSED (10 of 10)
+ (producer-consumer with semaphores)
+
+Passed 23 of 23 tests.
+Overall 23 of 23
+Points 160 of 160
