@@ -1,0 +1,656 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+Trying to build using gcc
+gcc -O -Wall -o varsort varsort.c -I/u/c/s/cs537-1/ta/tests/1a//util
+
+
+test build PASSED
+ (build project using make)
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/1a/../../lint/cpplint.py --extensions c,h varsort.c
+Done processing varsort.c
+Total errors found: 0
+
+
+test linttest PASSED (6 of 6)
+ (Lint test for C programming style)
+
+starting valgrindtest
+
+**********************************************************************
+
+Test valgrindtest
+Valgrind test for memory management
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 100000 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running valgrind
+/usr/bin/valgrind --show-reachable=yes --xml=yes --child-silent-after-fork=yes --xml-file=/tmp/tmpp4tPe2/p/vg_summary.xml ./varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile
+Valgrind completed in 2.0562748909 seconds
+
+
+test valgrindtest PASSED (5 of 5)
+ (Valgrind test for memory management)
+
+starting noarg
+
+**********************************************************************
+
+Test noarg
+No argument
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort
+
+
+test noarg PASSED (2 of 2)
+ (No argument)
+
+starting noinputfile
+
+**********************************************************************
+
+Test noinputfile
+Missing input file flag
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -o /tmp/tmpp4tPe2/p/outputfile
+
+
+test noinputfile PASSED (2 of 2)
+ (Missing input file flag)
+
+starting nooutputfile
+
+**********************************************************************
+
+Test nooutputfile
+Missing output file flag
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile
+
+
+test nooutputfile PASSED (2 of 2)
+ (Missing output file flag)
+
+starting invalidinputfile
+
+**********************************************************************
+
+Test invalidinputfile
+Invalid input file
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/invalid -o /tmp/tmpp4tPe2/p/outputfile
+
+
+test invalidinputfile PASSED (2 of 2)
+ (Invalid input file)
+
+starting invalidoutputfile
+
+**********************************************************************
+
+Test invalidoutputfile
+Invalid output file
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /invalid/file
+
+
+test invalidoutputfile PASSED (2 of 2)
+ (Invalid output file)
+
+starting extraarg
+
+**********************************************************************
+
+Test extraarg
+Extra invalid argument
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile invalid
+
+
+test extraarg PASSED (2 of 2)
+ (Extra invalid argument)
+
+starting allinvalidargs
+
+**********************************************************************
+
+Test allinvalidargs
+All invalid arguments
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort is an invalid arg
+
+
+test allinvalidargs PASSED (2 of 2)
+ (All invalid arguments)
+
+starting negativecolumn
+
+**********************************************************************
+
+Test negativecolumn
+Negative column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 0 -n 1 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c -3
+
+
+test negativecolumn PASSED (2 of 2)
+ (Negative column)
+
+starting unsigned1
+
+**********************************************************************
+
+Test unsigned1
+Input file with data 0xffffffff and 1
+
+**********************************************************************
+Generating input file
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.00135684013367 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test unsigned1 PASSED (5 of 5)
+ (Input file with data 0xffffffff and 1)
+
+starting unsigned2
+
+**********************************************************************
+
+Test unsigned2
+Input file with data 0x7fffffff and 0x80000000
+
+**********************************************************************
+Generating input file
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0144789218903 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test unsigned2 PASSED (5 of 5)
+ (Input file with data 0x7fffffff and 0x80000000)
+
+starting norecord
+
+**********************************************************************
+
+Test norecord
+Input file with no record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 1 -n 0 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0181291103363 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test norecord PASSED (5 of 5)
+ (Input file with no record)
+
+starting onerecord
+
+**********************************************************************
+
+Test onerecord
+Input file with a single record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 2 -n 1 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.00305986404419 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test onerecord PASSED (5 of 5)
+ (Input file with a single record)
+
+starting fiverecord
+
+**********************************************************************
+
+Test fiverecord
+Input file with 5 records
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 3 -n 5 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0116810798645 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test fiverecord PASSED (5 of 5)
+ (Input file with 5 records)
+
+starting mediumrecord
+
+**********************************************************************
+
+Test mediumrecord
+Input file with 100 records
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 4 -n 100 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.01393699646 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test mediumrecord PASSED (5 of 5)
+ (Input file with 100 records)
+
+starting largerecord
+
+**********************************************************************
+
+Test largerecord
+Input file with 10,000 records
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 5 -n 10000 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0379371643066 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test largerecord PASSED (5 of 5)
+ (Input file with 10,000 records)
+
+starting hugerecord
+
+**********************************************************************
+
+Test hugerecord
+Input file with 100,000 records
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 6 -n 100000 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.404660224915 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test hugerecord PASSED (5 of 5)
+ (Input file with 100,000 records)
+
+starting onedata
+
+**********************************************************************
+
+Test onedata
+Input file with maximal one integer per record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 2 -n 50 -m 1 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.00126099586487 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test onedata PASSED (5 of 5)
+ (Input file with maximal one integer per record)
+
+starting eightdata
+
+**********************************************************************
+
+Test eightdata
+Input file with maximal 8 integers per record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 3 -n 50 -m 8 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.00163507461548 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test eightdata PASSED (5 of 5)
+ (Input file with maximal 8 integers per record)
+
+starting mediumdata
+
+**********************************************************************
+
+Test mediumdata
+Input file with maximal 128 integers per record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 4 -n 50 -m 128 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0015070438385 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test mediumdata PASSED (5 of 5)
+ (Input file with maximal 128 integers per record)
+
+starting largedata
+
+**********************************************************************
+
+Test largedata
+Input file with maximal 512 integers per record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 5 -n 50 -m 512 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.0023980140686 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test largedata PASSED (5 of 5)
+ (Input file with maximal 512 integers per record)
+
+starting hugedata
+
+**********************************************************************
+
+Test hugedata
+Input file with maximal 2,048 integers per record
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 6 -n 50 -m 2048 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 0
+Varsort completed in 0.001708984375 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 0
+
+
+test hugedata PASSED (5 of 5)
+ (Input file with maximal 2,048 integers per record)
+
+starting randcolsmalldata
+
+**********************************************************************
+
+Test randcolsmalldata
+Input file with maximal 10 integers per record sorted by random column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 6 -n 100000 -m 10 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 6
+Varsort completed in 0.39395403862 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 6
+
+
+test randcolsmalldata PASSED (10 of 10)
+ (Input file with maximal 10 integers per record sorted by random column)
+
+starting randcolmediumdata
+
+**********************************************************************
+
+Test randcolmediumdata
+Input file with maximal 200 integers per record sorted by random column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 9 -n 100000 -m 200 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 132
+Varsort completed in 0.461701869965 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 132
+
+
+test randcolmediumdata PASSED (10 of 10)
+ (Input file with maximal 200 integers per record sorted by random column)
+
+starting randcolhugedata
+
+**********************************************************************
+
+Test randcolhugedata
+Input file with maximal 2000 integers per record sorted by random column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 7 -n 100000 -m 2000 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 1061
+Varsort completed in 0.911016941071 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 1061
+
+
+test randcolhugedata PASSED (10 of 10)
+ (Input file with maximal 2000 integers per record sorted by random column)
+
+starting lastcolsmalldata
+
+**********************************************************************
+
+Test lastcolsmalldata
+Input file with maximal 10 integers per record sorted by last column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 6 -n 100000 -m 10 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 9
+Varsort completed in 0.341377019882 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 9
+
+
+test lastcolsmalldata PASSED (10 of 10)
+ (Input file with maximal 10 integers per record sorted by last column)
+
+starting lastcolmediumdata
+
+**********************************************************************
+
+Test lastcolmediumdata
+Input file with maximal 200 integers per record sorted by last column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 9 -n 100000 -m 200 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 199
+Varsort completed in 0.491656064987 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 199
+
+
+test lastcolmediumdata PASSED (10 of 10)
+ (Input file with maximal 200 integers per record sorted by last column)
+
+starting lastcolhugedata
+
+**********************************************************************
+
+Test lastcolhugedata
+Input file with maximal 2000 integers per record sorted by last column
+
+**********************************************************************
+Generating input file by genvar
+/u/c/s/cs537-1/ta/tests/1a//bin/genvar -s 7 -n 100000 -m 2000 -o /tmp/tmpp4tPe2/p/inputfile
+Running varsort
+/tmp/tmpp4tPe2/p/varsort -i /tmp/tmpp4tPe2/p/inputfile -o /tmp/tmpp4tPe2/p/outputfile -c 1999
+Varsort completed in 1.01399898529 seconds
+Checking output
+/u/c/s/cs537-1/ta/tests/1a//util/checksort.py /tmp/tmpp4tPe2/p/inputfile /tmp/tmpp4tPe2/p/outputfile 1999
+
+
+test lastcolhugedata PASSED (10 of 10)
+ (Input file with maximal 2000 integers per record sorted by last column)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test linttest PASSED (6 of 6)
+ (Lint test for C programming style)
+
+test valgrindtest PASSED (5 of 5)
+ (Valgrind test for memory management)
+
+test noarg PASSED (2 of 2)
+ (No argument)
+
+test noinputfile PASSED (2 of 2)
+ (Missing input file flag)
+
+test nooutputfile PASSED (2 of 2)
+ (Missing output file flag)
+
+test invalidinputfile PASSED (2 of 2)
+ (Invalid input file)
+
+test invalidoutputfile PASSED (2 of 2)
+ (Invalid output file)
+
+test extraarg PASSED (2 of 2)
+ (Extra invalid argument)
+
+test allinvalidargs PASSED (2 of 2)
+ (All invalid arguments)
+
+test negativecolumn PASSED (2 of 2)
+ (Negative column)
+
+test unsigned1 PASSED (5 of 5)
+ (Input file with data 0xffffffff and 1)
+
+test unsigned2 PASSED (5 of 5)
+ (Input file with data 0x7fffffff and 0x80000000)
+
+test norecord PASSED (5 of 5)
+ (Input file with no record)
+
+test onerecord PASSED (5 of 5)
+ (Input file with a single record)
+
+test fiverecord PASSED (5 of 5)
+ (Input file with 5 records)
+
+test mediumrecord PASSED (5 of 5)
+ (Input file with 100 records)
+
+test largerecord PASSED (5 of 5)
+ (Input file with 10,000 records)
+
+test hugerecord PASSED (5 of 5)
+ (Input file with 100,000 records)
+
+test onedata PASSED (5 of 5)
+ (Input file with maximal one integer per record)
+
+test eightdata PASSED (5 of 5)
+ (Input file with maximal 8 integers per record)
+
+test mediumdata PASSED (5 of 5)
+ (Input file with maximal 128 integers per record)
+
+test largedata PASSED (5 of 5)
+ (Input file with maximal 512 integers per record)
+
+test hugedata PASSED (5 of 5)
+ (Input file with maximal 2,048 integers per record)
+
+test randcolsmalldata PASSED (10 of 10)
+ (Input file with maximal 10 integers per record sorted by random column)
+
+test randcolmediumdata PASSED (10 of 10)
+ (Input file with maximal 200 integers per record sorted by random column)
+
+test randcolhugedata PASSED (10 of 10)
+ (Input file with maximal 2000 integers per record sorted by random column)
+
+test lastcolsmalldata PASSED (10 of 10)
+ (Input file with maximal 10 integers per record sorted by last column)
+
+test lastcolmediumdata PASSED (10 of 10)
+ (Input file with maximal 200 integers per record sorted by last column)
+
+test lastcolhugedata PASSED (10 of 10)
+ (Input file with maximal 2000 integers per record sorted by last column)
+
+Passed 30 of 30 tests.
+Overall 30 of 30
+Points 152 of 152
