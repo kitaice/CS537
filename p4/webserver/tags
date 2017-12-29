@@ -1,0 +1,120 @@
+$	client	8
+.SUFFIXES	Makefile	/^.SUFFIXES: .c .o $/
+.c.o	Makefile	/^.c.o:$/
+Accept	cs537.c	/^int Accept(int s, struct sockaddr *addr, socklen_t/
+Bind	cs537.c	/^void Bind(int sockfd, struct sockaddr *my_addr, in/
+CC	Makefile	/^CC = gcc$/
+CFLAGS	Makefile	/^CFLAGS = -g -Wall$/
+Close	cs537.c	/^void Close(int fd) {$/
+Connect	cs537.c	/^void Connect(int sockfd, struct sockaddr *serv_add/
+DEF_MODE	cs537.h	30
+DEF_UMASK	cs537.h	31
+Dup2	cs537.c	/^int Dup2(int fd1, int fd2) {$/
+ELF	server	1
+ELF	server_cond	1
+Execve	cs537.c	/^void Execve(const char *filename, char *const argv/
+Fork	cs537.c	/^pid_t Fork(void) {$/
+Fstat	cs537.c	/^void Fstat(int fd, struct stat *buf) {$/
+Gethostbyaddr	cs537.c	/^struct hostent *Gethostbyaddr(const char *addr, in/
+Gethostbyname	cs537.c	/^struct hostent *Gethostbyname(const char *name) {$/
+Gethostname	cs537.c	/^int Gethostname(char *name, size_t len) {$/
+LIBS	Makefile	/^LIBS = -lpthread $/
+LISTENQ	cs537.h	57
+Listen	cs537.c	/^void Listen(int s, int backlog) {$/
+Lseek	cs537.c	/^off_t Lseek(int fildes, off_t offset, int whence) /
+MAXBUF	cs537.h	56
+MAXLINE	cs537.h	55
+Mclient	client.c	/^int main(int argc, char *argv[]) {$/
+Mmap	cs537.c	/^void *Mmap(void *addr, size_t len, int prot, int f/
+Moutput	output.c	/^int main(int argc, char *argv[]) {$/
+Mserver	server.c	/^int main(int argc, char *argv[]) {$/
+Munmap	cs537.c	/^void Munmap(void *start, size_t length) {$/
+OBJS	Makefile	/^OBJS = server.o request.o cs537.o client.o server_/
+OBJS	Makefile~	5
+Open	cs537.c	/^int Open(const char *pathname, int flags, mode_t m/
+Open_clientfd	cs537.c	/^int Open_clientfd(char *hostname, int port) {$/
+Open_listenfd	cs537.c	/^int Open_listenfd(int port) {$/
+PASSED	runtests.log	/^test build PASSED$/
+RIO_BUFSIZE	cs537.h	41
+Read	cs537.c	/^ssize_t Read(int fd, void *buf, size_t count) {$/
+Rio_readinitb	cs537.c	/^void Rio_readinitb(rio_t *rp, int fd) {$/
+Rio_readlineb	cs537.c	/^ssize_t Rio_readlineb(rio_t *rp, void *usrbuf, siz/
+Rio_readn	cs537.c	/^ssize_t Rio_readn(int fd, void *ptr, size_t nbytes/
+Rio_readnb	cs537.c	/^ssize_t Rio_readnb(rio_t *rp, void *usrbuf, size_t/
+Rio_writen	cs537.c	/^void Rio_writen(int fd, void *usrbuf, size_t n) {$/
+SA	cs537.h	36
+Select	cs537.c	/^int Select(int  n, fd_set *readfds, fd_set *writef/
+Setenv	cs537.c	/^int Setenv(const char *name, const char *value, in/
+Setsockopt	cs537.c	/^void Setsockopt(int s, int level, int optname, con/
+Socket	cs537.c	/^int Socket(int domain, int type, int protocol) {$/
+Stat	cs537.c	/^void Stat(const char *filename, struct stat *buf) /
+TARGET	Makefile	/^TARGET = server$/
+Time_GetSeconds	output.c	/^double Time_GetSeconds() {$/
+Wait	cs537.c	/^pid_t Wait(int *status) {$/
+Write	cs537.c	/^ssize_t Write(int fd, const void *buf, size_t coun/
+Y5­	client	71
+Y5­	cs537.o	54
+Y5­	server	117
+Y5­	server_cond	117
+__CSAPP_H__	cs537.h	2
+__SERVER_IMPL_H__	server_impl.h	2
+all	Makefile	/^all: server client output.cgi$/
+app_error	cs537.c	/^void app_error(char *msg) \/* application error *\/ /
+buffer	server_cond.c	9
+clean	Makefile	/^clean:$/
+client	Makefile	/^client: client.o cs537.o$/
+clientPrint	client.c	/^void clientPrint(int fd) {$/
+clientSend	client.c	/^void clientSend(int fd, char *filename) {$/
+consume	server_cond.c	8
+consumer	server_cond.c	/^void *consumer() {$/
+dns_error	cs537.c	/^void dns_error(char *msg) \/* dns-style error *\/ {$/
+empty	server_cond.c	11
+fd	server_cond.c	8
+fill	server_cond.c	12
+filter	CPPLINT.cfg	1
+getargs	output.c	/^void getargs() {$/
+getargs	server.c	/^void getargs(int *port, int argc, char *argv[]) {$/
+i	server_cond.c	8
+mutex	server_cond.c	13
+numbuf	server_cond.c	8
+numfull	server_cond.c	8
+numtrd	server_cond.c	8
+open_clientfd	cs537.c	/^int open_clientfd(char *hostname, int port) {$/
+open_listenfd	cs537.c	/^int open_listenfd(int port) {$/
+output.cgi	Makefile	/^output.cgi: output.c$/
+posix_error	cs537.c	/^void posix_error(int code, char *msg) \/* posix-sty/
+produce	server_cond.c	8
+requestError	request.c	/^void requestError(int fd, char *cause, char *errnu/
+requestGetFiletype	request.c	/^void requestGetFiletype(char *filename, char *file/
+requestHandle	request.c	/^void requestHandle(int fd) {$/
+requestParseURI	request.c	/^int requestParseURI(char *uri, char *filename, cha/
+requestReadhdrs	request.c	/^void requestReadhdrs(rio_t *rp) {$/
+requestServeDynamic	request.c	/^void requestServeDynamic(int fd, char *filename, c/
+requestServeStatic	request.c	/^void requestServeStatic(int fd, char *filename, in/
+rio_buf	cs537.h	46
+rio_bufptr	cs537.h	45
+rio_cnt	cs537.h	44
+rio_fd	cs537.h	43
+rio_read	cs537.c	/^static ssize_t rio_read(rio_t *rp, char *usrbuf, s/
+rio_readinitb	cs537.c	/^void rio_readinitb(rio_t *rp, int fd) {$/
+rio_readlineb	cs537.c	/^ssize_t rio_readlineb(rio_t *rp, void *usrbuf, siz/
+rio_readn	cs537.c	/^ssize_t rio_readn(int fd, void *usrbuf, size_t n) /
+rio_readnb	cs537.c	/^ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t/
+rio_t	cs537.h	47
+rio_writen	cs537.c	/^ssize_t rio_writen(int fd, void *usrbuf, size_t n)/
+server	Makefile	/^server: server_cond$/
+server_cond	Makefile	/^server_cond: server.o request.o cs537.o server_con/
+server_dispatch	server_cond.c	/^void server_dispatch(int connfd) { \/\/ handle a req/
+server_dispatch	server_none.c	/^void server_dispatch(int connfd) {$/
+server_dispatch	server_sema.c	/^void server_dispatch(int connfd) {$/
+server_init	server_cond.c	/^void server_init(int argc, char* argv[]) {$/
+server_init	server_none.c	/^void server_init(int argc, char* argv[]) {$/
+server_init	server_sema.c	/^void server_init(int argc, char* argv[]) {$/
+server_none	Makefile	/^server_none: server.o request.o cs537.o server_non/
+server_sema	Makefile	/^server_sema: server.o request.o cs537.o server_sem/
+spinfor	output.c	13
+t	server_cond.c	14
+unix_error	cs537.c	/^void unix_error(char *msg) \/* unix-style error *\/ /
+w	server	82
+w	server_cond	82
+w	server.o	7
