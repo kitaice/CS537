@@ -1,0 +1,516 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+gcc xsh.c -o xsh -Wall -std=gnu11
+
+
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py --extensions c,h xsh.c
+Done processing xsh.c
+Total errors found: 0
+
+
+test linttest PASSED (5 of 5)
+ (Lint test for C programming style)
+
+starting exit
+
+**********************************************************************
+
+Test exit
+run exit
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+starting exec
+
+**********************************************************************
+
+Test exec
+path should be /bin
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+starting badexec
+
+**********************************************************************
+
+Test badexec
+run programs that do not exist in /bin
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badexec PASSED (5 of 5)
+ (run programs that do not exist in /bin)
+
+starting stress
+
+**********************************************************************
+
+Test stress
+stress testing the shell with large number of commands
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/ctests/stress/gen -s 1 -n 10000
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+starting line
+
+**********************************************************************
+
+Test line
+line with maximum allowed length
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test line PASSED (5 of 5)
+ (line with maximum allowed length)
+
+starting badline
+
+**********************************************************************
+
+Test badline
+a line that is too long
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+starting badarg
+
+**********************************************************************
+
+Test badarg
+extra argument to xsh
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh /extra
+
+
+test badarg PASSED (5 of 5)
+ (extra argument to xsh)
+
+starting whitespace
+
+**********************************************************************
+
+Test whitespace
+leading and trailing whitespace, full whitespaces or empty string
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+starting cd
+
+**********************************************************************
+
+Test cd
+cd with argument
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+starting badcd
+
+**********************************************************************
+
+Test badcd
+cd to a bad directory
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badcd PASSED (5 of 5)
+ (cd to a bad directory)
+
+starting path
+
+**********************************************************************
+
+Test path
+run path and a program that exists in a given path
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+starting path2
+
+**********************************************************************
+
+Test path2
+run path with a long pathname and many different paths
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test path2 PASSED (5 of 5)
+ (run path with a long pathname and many different paths)
+
+starting rdr
+
+**********************************************************************
+
+Test rdr
+simple redirection with no standard error
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+starting rdr2
+
+**********************************************************************
+
+Test rdr2
+simple redirection with standard error
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test rdr2 PASSED (10 of 10)
+ (simple redirection with standard error)
+
+starting badrdr
+
+**********************************************************************
+
+Test badrdr
+bad redirection format
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badrdr PASSED (5 of 5)
+ (bad redirection format)
+
+starting badrdr2
+
+**********************************************************************
+
+Test badrdr2
+bad redirection that redirects to invalid path
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badrdr2 PASSED (5 of 5)
+ (bad redirection that redirects to invalid path)
+
+starting herestr
+
+**********************************************************************
+
+Test herestr
+simple here-string without output redirection
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test herestr PASSED (10 of 10)
+ (simple here-string without output redirection)
+
+starting herestr2
+
+**********************************************************************
+
+Test herestr2
+simple here-string with output redirection
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test herestr2 PASSED (10 of 10)
+ (simple here-string with output redirection)
+
+starting badherestr
+
+**********************************************************************
+
+Test badherestr
+bad here-string with no input
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badherestr PASSED (5 of 5)
+ (bad here-string with no input)
+
+starting badherestr2
+
+**********************************************************************
+
+Test badherestr2
+bad here-string with more than one word
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badherestr2 PASSED (5 of 5)
+ (bad here-string with more than one word)
+
+starting typebin
+
+**********************************************************************
+
+Test typebin
+type a command in /bin
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test typebin PASSED (5 of 5)
+ (type a command in /bin)
+
+starting typebuiltin
+
+**********************************************************************
+
+Test typebuiltin
+type a built-in command
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test typebuiltin PASSED (5 of 5)
+ (type a built-in command)
+
+starting typeorder
+
+**********************************************************************
+
+Test typeorder
+type a common command in multiple paths
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+starting badtype
+
+**********************************************************************
+
+Test badtype
+type a bad command
+
+**********************************************************************
+/tmp/tmpRtQBgo/p/./xsh
+
+
+test badtype PASSED (5 of 5)
+ (type a bad command)
+
+starting valgrindtest
+
+**********************************************************************
+
+Test valgrindtest
+Valgrind test for memory management
+
+**********************************************************************
+Running valgrind
+/usr/bin/valgrind --show-reachable=yes --xml=yes --child-silent-after-fork=yes --undef-value-errors=no --xml-file=/tmp/tmpRtQBgo/p/vg_summary.xml ./xsh
+[/tmp/tmpRtQBgo/p]
+0> [/tmp/tmpRtQBgo/p]
+0> tr is /usr/bin/tr
+[/tmp/tmpRtQBgo/p]
+0> [/tmp/tmpRtQBgo/p]
+0> An error has occurred
+[/tmp/tmpRtQBgo/p]
+1> [/tmp/tmpRtQBgo/p]
+0> [/afs/cs.wisc.edu/u]
+0> [/afs/cs.wisc.edu/u]
+0> total 54
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 _
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 a
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 b
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 c
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 d
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 e
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 f
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 g
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 h
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 i
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 j
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 k
+drwxr-xr-x 29 root staff 2048 Jul 10  2006 l
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 m
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 n
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 o
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 p
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 q
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 r
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 s
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 t
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 u
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 v
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 w
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 x
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 y
+drwxr-xr-x 29 root staff 2048 Apr  7  1995 z
+[/afs/cs.wisc.edu/u]
+0> Valgrind completed in 0.569519996643 seconds
+
+
+test valgrindtest PASSED (10 of 10)
+ (Valgrind test for memory management)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+test linttest PASSED (5 of 5)
+ (Lint test for C programming style)
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+test badexec PASSED (5 of 5)
+ (run programs that do not exist in /bin)
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+test line PASSED (5 of 5)
+ (line with maximum allowed length)
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+test badarg PASSED (5 of 5)
+ (extra argument to xsh)
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+test badcd PASSED (5 of 5)
+ (cd to a bad directory)
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+test path2 PASSED (5 of 5)
+ (run path with a long pathname and many different paths)
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+test rdr2 PASSED (10 of 10)
+ (simple redirection with standard error)
+
+test badrdr PASSED (5 of 5)
+ (bad redirection format)
+
+test badrdr2 PASSED (5 of 5)
+ (bad redirection that redirects to invalid path)
+
+test herestr PASSED (10 of 10)
+ (simple here-string without output redirection)
+
+test herestr2 PASSED (10 of 10)
+ (simple here-string with output redirection)
+
+test badherestr PASSED (5 of 5)
+ (bad here-string with no input)
+
+test badherestr2 PASSED (5 of 5)
+ (bad here-string with more than one word)
+
+test typebin PASSED (5 of 5)
+ (type a command in /bin)
+
+test typebuiltin PASSED (5 of 5)
+ (type a built-in command)
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+test badtype PASSED (5 of 5)
+ (type a bad command)
+
+test valgrindtest PASSED (10 of 10)
+ (Valgrind test for memory management)
+
+Passed 27 of 27 tests.
+Overall 27 of 27
+Points 155 of 155

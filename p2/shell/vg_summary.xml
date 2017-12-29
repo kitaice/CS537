@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: ./xsh</line>
+</preamble>
+
+<pid>4961</pid>
+<ppid>4960</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--show-reachable=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--child-silent-after-fork=yes</arg>
+    <arg>--undef-value-errors=no</arg>
+    <arg>--xml-file=/tmp/tmpx6ZScm/p/vg_summary.xml</arg>
+  </vargv>
+  <argv>
+    <exe>./xsh</exe>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.026 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x4C2EDEB</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>free</fn>
+    </frame>
+    <frame>
+      <ip>0x401C68</ip>
+      <obj>/tmp/tmpx6ZScm/p/xsh</obj>
+      <fn>run_type</fn>
+    </frame>
+    <frame>
+      <ip>0x401E3F</ip>
+      <obj>/tmp/tmpx6ZScm/p/xsh</obj>
+      <fn>run_cmd</fn>
+    </frame>
+    <frame>
+      <ip>0x402100</ip>
+      <obj>/tmp/tmpx6ZScm/p/xsh</obj>
+      <fn>loop</fn>
+    </frame>
+    <frame>
+      <ip>0x4021F1</ip>
+      <obj>/tmp/tmpx6ZScm/p/xsh</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffeffffe0 is on thread 1's stack</auxwhat>
+  <auxwhat>in frame #1, created by run_type (???:)</auxwhat>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:00.335 </time>
+</status>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x0</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
