@@ -1,0 +1,1925 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm -rf kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o kernel/bootmain.o kernel/bootasm.o kernel/multiboot.o kernel/data.o kernel/bootother.o kernel/initcode.o kernel/bio.d kernel/console.d kernel/exec.d kernel/file.d kernel/fs.d kernel/ide.d kernel/ioapic.d kernel/kalloc.d kernel/kbd.d kernel/lapic.d kernel/main.d kernel/mp.d kernel/picirq.d kernel/pipe.d kernel/proc.d kernel/spinlock.d kernel/string.d kernel/swtch.d kernel/syscall.d kernel/sysfile.d kernel/sysproc.d kernel/timer.d kernel/trapasm.d kernel/trap.d kernel/uart.d kernel/vectors.d kernel/vm.d kernel/bootmain.d kernel/bootasm.d kernel/multiboot.d kernel/data.d kernel/bootother.d kernel/initcode.d kernel/vectors.S kernel/bootblock kernel/bootblock.out kernel/bootother.out kernel/initcode.out kernel/kernel bootother initcode xv6.img user/bin user/cat user/echo user/forktest user/grep user/init user/kill user/ln user/ls user/hello user/mkdir user/rm user/sh user/stressfs user/tester user/usertests user/wc user/zombie user/cat.o user/echo.o user/forktest.o user/grep.o user/init.o user/kill.o user/ln.o user/ls.o user/hello.o user/mkdir.o user/rm.o user/sh.o user/stressfs.o user/tester.o user/usertests.o user/wc.o user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/cat.d user/echo.d user/forktest.d user/grep.d user/init.d user/kill.d user/ln.d user/ls.d user/hello.d user/mkdir.d user/rm.d user/sh.d user/stressfs.d user/tester.d user/usertests.d user/wc.d user/zombie.d user/ulib.d user/usys.d user/printf.d user/umalloc.d tools/mkfs tools/mkfs.o tools/mkfs.d fs fs.img .gdbinit .bochsrc dist
+Trying to build project using make
+make
+Makefile:150: kernel/bio.d: No such file or directory
+Makefile:150: kernel/console.d: No such file or directory
+Makefile:150: kernel/exec.d: No such file or directory
+Makefile:150: kernel/file.d: No such file or directory
+Makefile:150: kernel/fs.d: No such file or directory
+Makefile:150: kernel/ide.d: No such file or directory
+Makefile:150: kernel/ioapic.d: No such file or directory
+Makefile:150: kernel/kalloc.d: No such file or directory
+Makefile:150: kernel/kbd.d: No such file or directory
+Makefile:150: kernel/lapic.d: No such file or directory
+Makefile:150: kernel/main.d: No such file or directory
+Makefile:150: kernel/mp.d: No such file or directory
+Makefile:150: kernel/picirq.d: No such file or directory
+Makefile:150: kernel/pipe.d: No such file or directory
+Makefile:150: kernel/proc.d: No such file or directory
+Makefile:150: kernel/spinlock.d: No such file or directory
+Makefile:150: kernel/string.d: No such file or directory
+Makefile:150: kernel/swtch.d: No such file or directory
+Makefile:150: kernel/syscall.d: No such file or directory
+Makefile:150: kernel/sysfile.d: No such file or directory
+Makefile:150: kernel/sysproc.d: No such file or directory
+Makefile:150: kernel/timer.d: No such file or directory
+Makefile:150: kernel/trapasm.d: No such file or directory
+Makefile:150: kernel/trap.d: No such file or directory
+Makefile:150: kernel/uart.d: No such file or directory
+Makefile:150: kernel/vectors.d: No such file or directory
+Makefile:150: kernel/vm.d: No such file or directory
+Makefile:150: kernel/bootmain.d: No such file or directory
+Makefile:150: kernel/bootasm.d: No such file or directory
+Makefile:150: kernel/multiboot.d: No such file or directory
+Makefile:150: kernel/data.d: No such file or directory
+Makefile:150: kernel/bootother.d: No such file or directory
+Makefile:150: kernel/initcode.d: No such file or directory
+Makefile:150: user/cat.d: No such file or directory
+Makefile:150: user/echo.d: No such file or directory
+Makefile:150: user/forktest.d: No such file or directory
+Makefile:150: user/grep.d: No such file or directory
+Makefile:150: user/init.d: No such file or directory
+Makefile:150: user/kill.d: No such file or directory
+Makefile:150: user/ln.d: No such file or directory
+Makefile:150: user/ls.d: No such file or directory
+Makefile:150: user/hello.d: No such file or directory
+Makefile:150: user/mkdir.d: No such file or directory
+Makefile:150: user/rm.d: No such file or directory
+Makefile:150: user/sh.d: No such file or directory
+Makefile:150: user/stressfs.d: No such file or directory
+Makefile:150: user/tester.d: No such file or directory
+Makefile:150: user/usertests.d: No such file or directory
+Makefile:150: user/wc.d: No such file or directory
+Makefile:150: user/zombie.d: No such file or directory
+Makefile:150: user/ulib.d: No such file or directory
+Makefile:150: user/usys.d: No such file or directory
+Makefile:150: user/printf.d: No such file or directory
+Makefile:150: user/umalloc.d: No such file or directory
+Makefile:150: tools/mkfs.d: No such file or directory
+gcc  -iquote include -Wall -Werror -ggdb  \
+  -M -MG tools/mkfs.c -MF tools/mkfs.d -MT tools/mkfs.d -MT tools/mkfs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/umalloc.c -MF user/umalloc.d -MT user/umalloc.d -MT user/umalloc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/printf.c -MF user/printf.d -MT user/printf.d -MT user/printf.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/usys.S -MF user/usys.d -MT user/usys.d -MT user/usys.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ulib.c -MF user/ulib.d -MT user/ulib.d -MT user/ulib.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/zombie.c -MF user/zombie.d -MT user/zombie.d -MT user/zombie.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/wc.c -MF user/wc.d -MT user/wc.d -MT user/wc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/usertests.c -MF user/usertests.d -MT user/usertests.d -MT user/usertests.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/stressfs.c -MF user/stressfs.d -MT user/stressfs.d -MT user/stressfs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/sh.c -MF user/sh.d -MT user/sh.d -MT user/sh.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/rm.c -MF user/rm.d -MT user/rm.d -MT user/rm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/mkdir.c -MF user/mkdir.d -MT user/mkdir.d -MT user/mkdir.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/hello.c -MF user/hello.d -MT user/hello.d -MT user/hello.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ls.c -MF user/ls.d -MT user/ls.d -MT user/ls.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/ln.c -MF user/ln.d -MT user/ln.d -MT user/ln.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/kill.c -MF user/kill.d -MT user/kill.d -MT user/kill.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/init.c -MF user/init.d -MT user/init.d -MT user/init.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/grep.c -MF user/grep.d -MT user/grep.d -MT user/grep.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/forktest.c -MF user/forktest.d -MT user/forktest.d -MT user/forktest.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/echo.c -MF user/echo.d -MT user/echo.d -MT user/echo.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/cat.c -MF user/cat.d -MT user/cat.d -MT user/cat.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/initcode.S -MF kernel/initcode.d -MT kernel/initcode.d -MT kernel/initcode.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootother.S -MF kernel/bootother.d -MT kernel/bootother.d -MT kernel/bootother.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/data.S -MF kernel/data.d -MT kernel/data.d -MT kernel/data.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/multiboot.S -MF kernel/multiboot.d -MT kernel/multiboot.d -MT kernel/multiboot.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootasm.S -MF kernel/bootasm.d -MT kernel/bootasm.d -MT kernel/bootasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bootmain.c -MF kernel/bootmain.d -MT kernel/bootmain.d -MT kernel/bootmain.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/vm.c -MF kernel/vm.d -MT kernel/vm.d -MT kernel/vm.o
+perl kernel/vectors.pl > kernel/vectors.S
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/vectors.S -MF kernel/vectors.d -MT kernel/vectors.d -MT kernel/vectors.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/uart.c -MF kernel/uart.d -MT kernel/uart.d -MT kernel/uart.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/trap.c -MF kernel/trap.d -MT kernel/trap.d -MT kernel/trap.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/trapasm.S -MF kernel/trapasm.d -MT kernel/trapasm.d -MT kernel/trapasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/timer.c -MF kernel/timer.d -MT kernel/timer.d -MT kernel/timer.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/sysproc.c -MF kernel/sysproc.d -MT kernel/sysproc.d -MT kernel/sysproc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/sysfile.c -MF kernel/sysfile.d -MT kernel/sysfile.d -MT kernel/sysfile.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/syscall.c -MF kernel/syscall.d -MT kernel/syscall.d -MT kernel/syscall.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/swtch.S -MF kernel/swtch.d -MT kernel/swtch.d -MT kernel/swtch.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/string.c -MF kernel/string.d -MT kernel/string.d -MT kernel/string.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/spinlock.c -MF kernel/spinlock.d -MT kernel/spinlock.d -MT kernel/spinlock.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/proc.c -MF kernel/proc.d -MT kernel/proc.d -MT kernel/proc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/pipe.c -MF kernel/pipe.d -MT kernel/pipe.d -MT kernel/pipe.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/picirq.c -MF kernel/picirq.d -MT kernel/picirq.d -MT kernel/picirq.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/mp.c -MF kernel/mp.d -MT kernel/mp.d -MT kernel/mp.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/main.c -MF kernel/main.d -MT kernel/main.d -MT kernel/main.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/lapic.c -MF kernel/lapic.d -MT kernel/lapic.d -MT kernel/lapic.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/kbd.c -MF kernel/kbd.d -MT kernel/kbd.d -MT kernel/kbd.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/kalloc.c -MF kernel/kalloc.d -MT kernel/kalloc.d -MT kernel/kalloc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/ioapic.c -MF kernel/ioapic.d -MT kernel/ioapic.d -MT kernel/ioapic.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/ide.c -MF kernel/ide.d -MT kernel/ide.d -MT kernel/ide.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/fs.c -MF kernel/fs.d -MT kernel/fs.d -MT kernel/fs.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/file.c -MF kernel/file.d -MT kernel/file.d -MT kernel/file.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/exec.c -MF kernel/exec.d -MT kernel/exec.d -MT kernel/exec.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/console.c -MF kernel/console.d -MT kernel/console.d -MT kernel/console.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG kernel/bio.c -MF kernel/bio.d -MT kernel/bio.d -MT kernel/bio.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/bootasm.S -o kernel/bootasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	 -Os -c -o kernel/bootmain.o kernel/bootmain.c
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x7C00 \
+	--output=kernel/bootblock.out kernel/bootasm.o kernel/bootmain.o
+objcopy -S -O binary -j .text kernel/bootblock.out kernel/bootblock
+./kernel/sign.pl kernel/bootblock
+boot block is 431 bytes (max 510)
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/bio.o kernel/bio.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/console.o kernel/console.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/exec.o kernel/exec.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/file.o kernel/file.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/fs.o kernel/fs.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ide.o kernel/ide.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/ioapic.o kernel/ioapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kalloc.o kernel/kalloc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/kbd.o kernel/kbd.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/lapic.o kernel/lapic.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/main.o kernel/main.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/mp.o kernel/mp.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/picirq.o kernel/picirq.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/pipe.o kernel/pipe.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/proc.o kernel/proc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/spinlock.o kernel/spinlock.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/string.o kernel/string.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/swtch.S -o kernel/swtch.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/syscall.o kernel/syscall.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysfile.o kernel/sysfile.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysproc.o kernel/sysproc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/timer.o kernel/timer.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/trapasm.S -o kernel/trapasm.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/trap.o kernel/trap.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/uart.o kernel/uart.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/vectors.S -o kernel/vectors.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/vm.o kernel/vm.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/multiboot.S -o kernel/multiboot.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/data.S -o kernel/data.o
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/bootother.S -o kernel/bootother.o
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x7000 \
+	--output=kernel/bootother.out kernel/bootother.o
+objcopy -S -O binary kernel/bootother.out bootother
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c kernel/initcode.S -o kernel/initcode.o
+ld  -m    elf_i386 -nostdlib --omagic \
+	--entry=start --section-start=.text=0x0 \
+	--output=kernel/initcode.out kernel/initcode.o
+objcopy -S -O binary kernel/initcode.out initcode
+ld  -m    elf_i386 -nostdlib --omagic \
+	--section-start=.text=0x100000 --entry=main --output=kernel/kernel \
+	kernel/multiboot.o kernel/data.o kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o \
+	-b binary initcode bootother
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes (5.1 MB, 4.9 MiB) copied, 0.0100798 s, 508 MB/s
+dd if=kernel/bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes copied, 5.549e-05 s, 9.2 MB/s
+dd if=kernel/kernel of=xv6.img seek=1 conv=notrunc
+242+1 records in
+242+1 records out
+124108 bytes (124 kB, 121 KiB) copied, 0.0002681 s, 463 MB/s
+gcc -c  -iquote include -Wall -Werror -ggdb  -o tools/mkfs.o tools/mkfs.c
+gcc  tools/mkfs.o -o tools/mkfs
+mkdir -p fs
+cp README fs/README
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/cat.o user/cat.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ulib.o user/ulib.c
+gcc  -I include -nostdinc -ggdb  -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c user/usys.S -o user/usys.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/printf.o user/printf.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/umalloc.o user/umalloc.c
+mkdir -p user/bin
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/cat user/cat.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/cat fs/cat
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/echo.o user/echo.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/echo user/echo.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/echo fs/echo
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/forktest.o user/forktest.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/forktest user/forktest.o user/ulib.o user/usys.o
+cp user/bin/forktest fs/forktest
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/grep.o user/grep.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/grep user/grep.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/grep fs/grep
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/init.o user/init.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/init user/init.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/init fs/init
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/kill.o user/kill.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/kill user/kill.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/kill fs/kill
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ln.o user/ln.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/ln user/ln.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ln fs/ln
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/ls.o user/ls.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/ls user/ls.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/ls fs/ls
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/hello.o user/hello.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/hello user/hello.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/hello fs/hello
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/mkdir.o user/mkdir.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/mkdir user/mkdir.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/mkdir fs/mkdir
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/rm.o user/rm.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/rm user/rm.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/rm fs/rm
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/sh.o user/sh.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/sh user/sh.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/sh fs/sh
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/stressfs.o user/stressfs.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/stressfs user/stressfs.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/stressfs fs/stressfs
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/usertests.o user/usertests.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/usertests user/usertests.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/usertests fs/usertests
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/wc.o user/wc.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/wc user/wc.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/wc fs/wc
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/zombie.o user/zombie.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/zombie user/zombie.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/zombie fs/zombie
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 427 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/ls user/bin/stressfs user/bin/grep user/bin/tester user/bin/hello user/bin/kill user/bin/cat user/bin/mkdir user/bin/init user/bin/rm user/bin/echo user/bin/ln user/bin/usertests user/bin/sh user/bin/wc user/bin/zombie
+
+
+test build PASSED
+ (build xv6 using make)
+
+starting getpinfo
+
+**********************************************************************
+
+Test getpinfo
+Workload: Check getpinfo works
+  Expected: pstat fields filled by getpinfo
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/getpinfo.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 429 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 1 priority: 2
+ 	 level 3 ticks used 8
+	 level 2 ticks used 8
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 2 priority: 2
+ 	 level 3 ticks used 8
+	 level 2 ticks used 11
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 3 priority: 2
+ 	 level 3 ticks used 8
+	 level 2 ticks used 1
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+TEST PASSED
+
+test getpinfo PASSED (10 of 10)
+ (Workload: Check getpinfo works
+  Expected: pstat fields filled by getpinfo)
+
+starting setpriority
+
+**********************************************************************
+
+Test setpriority
+Workload: Check setpriority works
+  Expected: the priority value should be updated after calling setpriority
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/setpriority.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+test setpriority PASSED (10 of 10)
+ (Workload: Check setpriority works
+  Expected: the priority value should be updated after calling setpriority)
+
+starting test_ptable
+
+**********************************************************************
+
+Test test_ptable
+Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/test_ptable.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 429 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+
+test test_ptable PASSED (10 of 10)
+ (Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable)
+
+starting single_job_long
+
+**********************************************************************
+
+Test single_job_long
+Workload: Single long running process (spinning)
+  Expected: Single long job should use up all time ticks of level 0-2 and running at the lowest priority
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/single_job_long.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 1
+	 level 3 ticks used 8
+	 level 2 ticks used 9
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 2
+	 level 3 ticks used 8
+	 level 2 ticks used 11
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 3
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 876
+TEST PASSED
+
+test single_job_long PASSED (10 of 10)
+ (Workload: Single long running process (spinning)
+  Expected: Single long job should use up all time ticks of level 0-2 and running at the lowest priority)
+
+starting new_process
+
+**********************************************************************
+
+Test new_process
+Workload: Parent process runs until at lowest, fork child process
+  Expected: Child process gets scheduled at the higher priority than parent
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/new_process.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 430 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 3 priority: 0
+ 	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 55
+pid: 4 priority: 3
+ 	 level 3 ticks used 1
+	 level 2 ticks used 0
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+TEST PASSED
+
+test new_process PASSED (10 of 10)
+ (Workload: Parent process runs until at lowest, fork child process
+  Expected: Child process gets scheduled at the higher priority than parent)
+
+starting stress_test
+
+**********************************************************************
+
+Test stress_test
+Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/stress_test.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid : 3, level : 2, ticks : 13
+pid : 3, level : 2, ticks : 14
+pid : 3, level : 2, ticks : 15
+pid : 3, level : 1, ticks : 0
+pid : 3, level : 1, ticks : 1
+pid : 3, level : 1, ticks : 3
+pid : 3, level : 1, ticks : 4
+pid : 3, level : 1, ticks : 5
+pid : 3, level : 1, ticks : 6
+pid : 3, level : 1, ticks : 7
+pid : 3, level : 1, ticks : 8
+pid : 3, level : 1, ticks : 10
+pid : 3, level : 1, ticks : 11
+pid : 3, level : 1, ticks : 12
+pid : 3, level : 1, ticks : 13
+pid : 3, level : 1, ticks : 14
+pid : 3, level : 1, ticks : 16
+pid : 3, level : 1, ticks : 17
+pid : 3, level : 1, ticks : 18
+pid : 3, level : 1, ticks : 19
+pid : 3, level : 1, ticks : 20
+pid : 3, level : 1, ticks : 22
+pid : 3, level : 1, ticks : 23
+pid : 3, level : 1, ticks : 24
+pid : 3, level : 1, ticks : 25
+pid : 3, level : 1, ticks : 26
+pid : 3, level : 1, ticks : 28
+pid : 3, level : 1, ticks : 29
+pid : 3, level : 1, ticks : 30
+pid : 3, level : 1, ticks : 31
+pid : 3, level : 0, ticks : 0
+pid : 3, level : 0, ticks : 2
+pid : 3, level : 0, ticks : 3
+pid : 3, level : 0, ticks : 4
+pid : 3, level : 0, ticks : 5
+pid : 3, level : 0, ticks : 6
+pid : 3, level : 0, ticks : 7
+pid : 3, level : 0, ticks : 8
+pid : 3, level : 0, ticks : 9
+pid : 3, level : 0, ticks : 10
+pid : 3, level : 0, ticks : 12
+pid : 3, level : 0, ticks : 13
+pid : 3, level : 0, ticks : 14
+pid : 3, level : 0, ticks : 15
+pid : 3, level : 0, ticks : 16
+pid : 3, level : 0, ticks : 17
+pid : 3, level : 0, ticks : 18
+pid : 3, level : 0, ticks : 19
+pid : 3, level : 0, ticks : 21
+pid : 3, level : 0, ticks : 22
+pid : 3, level : 0, ticks : 23
+pid : 3, level : 0, ticks : 24
+pid : 3, level : 0, ticks : 25
+pid : 3, level : 0, ticks : 27
+pid : 3, level : 0, ticks : 28
+pid : 3, level : 0, ticks : 29
+pid : 3, level : 0, ticks : 30
+pid : 3, level : 0, ticks : 32
+pid : 3, level : 0, ticks : 33
+pid : 3, level : 0, ticks : 34
+pid : 3, level : 0, ticks : 35
+TEST PASSED
+
+test stress_test PASSED (10 of 10)
+ (Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes)
+
+starting stress_test_io
+
+**********************************************************************
+
+Test stress_test_io
+Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/stress_test_io.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid : 3, level : 2, ticks : 14
+pid : 3, level : 2, ticks : 15
+pid : 3, level : 1, ticks : 0
+pid : 3, level : 1, ticks : 1
+pid : 3, level : 1, ticks : 2
+pid : 3, level : 1, ticks : 4
+pid : 3, level : 1, ticks : 5
+pid : 3, level : 1, ticks : 6
+pid : 3, level : 1, ticks : 7
+pid : 3, level : 1, ticks : 8
+pid : 3, level : 1, ticks : 10
+pid : 3, level : 1, ticks : 11
+pid : 3, level : 1, ticks : 12
+pid : 3, level : 1, ticks : 13
+pid : 3, level : 1, ticks : 14
+pid : 3, level : 1, ticks : 16
+pid : 3, level : 1, ticks : 17
+pid : 3, level : 1, ticks : 18
+pid : 3, level : 1, ticks : 19
+pid : 3, level : 1, ticks : 20
+pid : 3, level : 1, ticks : 22
+pid : 3, level : 1, ticks : 23
+pid : 3, level : 1, ticks : 24
+pid : 3, level : 1, ticks : 25
+pid : 3, level : 1, ticks : 26
+pid : 3, level : 1, ticks : 27
+pid : 3, level : 1, ticks : 28
+pid : 3, level : 1, ticks : 29
+pid : 3, level : 1, ticks : 30
+pid : 3, level : 1, ticks : 31
+pid : 3, level : 0, ticks : 1
+pid : 3, level : 0, ticks : 2
+pid : 3, level : 0, ticks : 3
+pid : 3, level : 0, ticks : 4
+pid : 3, level : 0, ticks : 5
+pid : 3, level : 0, ticks : 6
+pid : 3, level : 0, ticks : 8
+pid : 3, level : 0, ticks : 9
+pid : 3, level : 0, ticks : 10
+pid : 3, level : 0, ticks : 11
+pid : 3, level : 0, ticks : 12
+pid : 3, level : 0, ticks : 14
+pid : 3, level : 0, ticks : 15
+pid : 3, level : 0, ticks : 16
+pid : 3, level : 0, ticks : 17
+pid : 3, level : 0, ticks : 18
+pid : 3, level : 0, ticks : 20
+pid : 3, level : 0, ticks : 21
+pid : 3, level : 0, ticks : 22
+pid : 3, level : 0, ticks : 23
+pid : 3, level : 0, ticks : 24
+pid : 3, level : 0, ticks : 26
+pid : 3, level : 0, ticks : 27
+pid : 3, level : 0, ticks : 28
+pid : 3, level : 0, ticks : 29
+pid : 3, level : 0, ticks : 30
+pid : 3, level : 0, ticks : 32
+pid : 3, level : 0, ticks : 33
+pid : 3, level : 0, ticks : 34
+pid : 3, level : 0, ticks : 35
+pid : 3, level : 0, ticks : 36
+TEST PASSED
+
+test stress_test_io PASSED (10 of 10)
+ (Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail)
+
+starting multiple_jobs
+
+**********************************************************************
+
+Test multiple_jobs
+Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p3 - 8 ticks, p2 - 16 ticks, p1 - 32 ticks, etc.)
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/multiple_jobs.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 432 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 1
+	 level 3 ticks used 8
+	 level 2 ticks used 9
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 2
+	 level 3 ticks used 8
+	 level 2 ticks used 11
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 3
+	 level 3 ticks used 8
+	 level 2 ticks used 13
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 4
+	 level 3 ticks used 5
+	 level 2 ticks used 0
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 2
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 7
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 12
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 8
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 0
+	 level 0 ticks used 0
+pid: 9
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 5
+	 level 0 ticks used 0
+pid: 10
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 9
+	 level 0 ticks used 0
+pid: 11
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 14
+	 level 0 ticks used 0
+pid: 12
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 18
+	 level 0 ticks used 0
+pid: 13
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 22
+	 level 0 ticks used 0
+pid: 14
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 28
+	 level 0 ticks used 0
+pid: 15
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 16
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 5
+pid: 17
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 9
+pid: 18
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 13
+pid: 19
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 19
+pid: 20
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 23
+pid: 21
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 27
+pid: 22
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 32
+pid: 23
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 37
+pid: 24
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 41
+pid: 25
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 45
+pid: 26
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 50
+pid: 27
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 56
+pid: 28
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 60
+pid: 29
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 63
+pid: 30
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 69
+pid: 31
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 74
+pid: 32
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 78
+pid: 33
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 81
+pid: 34
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 87
+pid: 35
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 93
+pid: 36
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 95
+pid: 37
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 100
+pid: 38
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 105
+pid: 39
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 111
+pid: 40
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 114
+pid: 41
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 118
+pid: 42
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 123
+pid: 43
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 129
+pid: 44
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 132
+pid: 45
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 137
+pid: 46
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 141
+pid: 47
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 148
+pid: 48
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 150
+pid: 49
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 154
+pid: 50
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 160
+pid: 51
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 166
+pid: 52
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 172
+pid: 53
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 188
+pid: 54
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 190
+pid: 55
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 185
+pid: 56
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 188
+pid: 57
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 191
+pid: 58
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 197
+pid: 59
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 204
+pid: 60
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 205
+pid: 61
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 209
+pid: 62
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 215
+pid: 63
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 222
+pid: 64
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 323
+TEST PASSED
+
+test multiple_jobs PASSED (10 of 10)
+ (Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p3 - 8 ticks, p2 - 16 ticks, p1 - 32 ticks, etc.))
+
+starting multiple_jobs_io
+
+**********************************************************************
+
+Test multiple_jobs_io
+Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/multiple_jobs_io.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 1 priority: 2
+pid: 2 priority: 2
+pid: 3 priority: 2
+pid: 4 priority: 3
+pid: 5 priority: 3
+pid: 6 priority: 3
+pid: 7 priority: 3
+pid: 8 priority: 3
+pid: 9 priority: 3
+pid: 10 priority: 3
+pid: 11 priority: 3
+pid: 12 priority: 3
+pid: 13 priority: 3
+pid: 14 priority: 3
+pid: 15 priority: 3
+pid: 16 priority: 3
+pid: 17 priority: 3
+pid: 18 priority: 3
+pid: 19 priority: 3
+pid: 20 priority: 3
+pid: 21 priority: 3
+pid: 22 priority: 3
+pid: 23 priority: 3
+pid: 24 priority: 3
+pid: 25 priority: 3
+pid: 26 priority: 3
+pid: 27 priority: 3
+pid: 28 priority: 3
+pid: 29 priority: 3
+pid: 30 priority: 3
+pid: 31 priority: 3
+pid: 32 priority: 3
+pid: 33 priority: 3
+pid: 34 priority: 3
+pid: 35 priority: 3
+pid: 36 priority: 3
+pid: 37 priority: 3
+pid: 38 priority: 3
+pid: 39 priority: 3
+pid: 40 priority: 3
+pid: 41 priority: 3
+pid: 42 priority: 3
+pid: 43 priority: 3
+pid: 44 priority: 3
+pid: 45 priority: 3
+pid: 46 priority: 3
+pid: 47 priority: 3
+pid: 48 priority: 3
+pid: 49 priority: 3
+pid: 50 priority: 3
+pid: 51 priority: 3
+pid: 52 priority: 3
+pid: 53 priority: 3
+pid: 54 priority: 3
+pid: 55 priority: 3
+pid: 56 priority: 3
+pid: 57 priority: 3
+pid: 58 priority: 3
+pid: 59 priority: 3
+pid: 60 priority: 3
+pid: 61 priority: 3
+pid: 62 priority: 3
+pid: 63 priority: 3
+pid: 64 priority: 3
+TEST PASSED
+
+test multiple_jobs_io PASSED (10 of 10)
+ (Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail)
+
+starting round_robin
+
+**********************************************************************
+
+Test round_robin
+Workload: 4 processes running long running workloads (spinning)
+  Expected: All processes have used up the timer ticks in level 3, 2 and 1 and are all running in the lowest level with timer ticks mod 64
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/round_robin.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 431 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+TEST PASSED
+
+test round_robin PASSED (10 of 10)
+ (Workload: 4 processes running long running workloads (spinning)
+  Expected: All processes have used up the timer ticks in level 3, 2 and 1 and are all running in the lowest level with timer ticks mod 64)
+
+starting setpriority2
+
+**********************************************************************
+
+Test setpriority2
+Workload: Check setpriority takes effect after rescheduled
+  Expected: All the timer ticks at the levels lower than the assigned priority should increase appropriately
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/setpriority2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 432 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+Before priority gets updated
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+After priority gets updated and scheduled for some time
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 32
+	 level 1 ticks used 64
+	 level 0 ticks used 448
+TEST PASSED
+
+test setpriority2 PASSED (15 of 15)
+ (Workload: Check setpriority takes effect after rescheduled
+  Expected: All the timer ticks at the levels lower than the assigned priority should increase appropriately)
+
+starting relinquish
+
+**********************************************************************
+
+Test relinquish
+Workload: 4 processes running long running workloads, but one of them yields CPU for a while and regains CPU
+  Expected: The process that yields CPU should stop its timer ticks until it regains CPU
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/relinquish.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+	-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+init
+sh
+hello
+usertests
+wc
+kill
+mkdir
+rm
+tester
+stressfs
+grep
+echo
+cat
+ln
+README
+zombie
+forktest
+ls
+balloc: first 432 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox CPUS=1
+Ctrl+a h for help
+/u/c/s/cs537-2/ta/tools/qemu -nographic -hdb fs.img xv6.img -smp 1
+Could not open option rom 'sgabios.bin': No such file or directory
+xv6...
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 0
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 64
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 128
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 192
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 256
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 291
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 292
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 384
+pid: 4
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+pid: 5
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+pid: 6
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 320
+pid: 7
+	 level 3 ticks used 8
+	 level 2 ticks used 16
+	 level 1 ticks used 32
+	 level 0 ticks used 448
+TEST PASSED
+
+test relinquish PASSED (15 of 15)
+ (Workload: 4 processes running long running workloads, but one of them yields CPU for a while and regains CPU
+  Expected: The process that yields CPU should stop its timer ticks until it regains CPU)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build xv6 using make)
+
+test getpinfo PASSED (10 of 10)
+ (Workload: Check getpinfo works
+  Expected: pstat fields filled by getpinfo)
+
+test setpriority PASSED (10 of 10)
+ (Workload: Check setpriority works
+  Expected: the priority value should be updated after calling setpriority)
+
+test test_ptable PASSED (10 of 10)
+ (Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable)
+
+test single_job_long PASSED (10 of 10)
+ (Workload: Single long running process (spinning)
+  Expected: Single long job should use up all time ticks of level 0-2 and running at the lowest priority)
+
+test new_process PASSED (10 of 10)
+ (Workload: Parent process runs until at lowest, fork child process
+  Expected: Child process gets scheduled at the higher priority than parent)
+
+test stress_test PASSED (10 of 10)
+ (Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes)
+
+test stress_test_io PASSED (10 of 10)
+ (Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail)
+
+test multiple_jobs PASSED (10 of 10)
+ (Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p3 - 8 ticks, p2 - 16 ticks, p1 - 32 ticks, etc.))
+
+test multiple_jobs_io PASSED (10 of 10)
+ (Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail)
+
+test round_robin PASSED (10 of 10)
+ (Workload: 4 processes running long running workloads (spinning)
+  Expected: All processes have used up the timer ticks in level 3, 2 and 1 and are all running in the lowest level with timer ticks mod 64)
+
+test setpriority2 PASSED (15 of 15)
+ (Workload: Check setpriority takes effect after rescheduled
+  Expected: All the timer ticks at the levels lower than the assigned priority should increase appropriately)
+
+test relinquish PASSED (15 of 15)
+ (Workload: 4 processes running long running workloads, but one of them yields CPU for a while and regains CPU
+  Expected: The process that yields CPU should stop its timer ticks until it regains CPU)
+
+Passed 13 of 13 tests.
+Overall 13 of 13
+Points 130 of 130
